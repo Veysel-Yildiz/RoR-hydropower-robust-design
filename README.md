@@ -5,15 +5,15 @@ The methodology presented in the paper by  V. Yildiz, S.F. Brown, C. Rougé  "Rev
 
 # MATLAB Library: Amalgam_HYPER and Robustness_Analysis
 
-This MATLAB library consists of two main folders: Amalgam_Hyper for multi-objective optimization (MO) and Robustness_Analysis for robustness analysis under different scenarios. Each folder contains separate setups for five case studies. 
+This MATLAB library consists of two main folders: Amalgam_Hyper for multi-objective optimization (MO) and Robustness_Analysis for robustness analysis under different scenarios. Each folder contains separate setups for five case studies; 
 
-1. Case Study 1: [Besik RoR]
-2. Case Study 2: [Tepe RoR]
-3. Case Study 3: [Karacay RoR]
-4. Case Study 4: [Kaplan RoR]
-5. Case Study 5: [Buyukdere RoR]
+Case Study 1: [Besik RoR]
+Case Study 2: [Tepe RoR]
+Case Study 3: [Karacay RoR]
+Case Study 4: [Kaplan RoR]
+Case Study 5: [Buyukdere RoR]
 
-Additionally, a MATLAB code file is provided for post-processing the robustness results once the analysis is completed. The library is released under the MIT License.
+Additionally, a MATLAB code is provided for post-processing the robustness results once the analysis is completed.
 
 ## Amalgam_HYPER
 
@@ -29,7 +29,7 @@ To use the Amalgam_HYPER code:
 
 ## Robustness_Analysis
 
-The Robustness_Analysis folder contains the robustness analysis code and setup for the five case studies. This code is used to evaluate generated design alternative robustness under various scenarios. Each case study has its own setup within the folder.
+The Robustness_Analysis folder contains the robustness analysis code and setup for the five case studies. This code is used to evaluate generated design alternatives robustness under various scenarios. Each case study has its own setup within the folder.
 
 To use the Robustness_Analysis code:
 
@@ -46,7 +46,7 @@ After running the robustness analysis, you can use the provided MATLAB code file
 
 ## Robustness Results Repository
 
-Since running the case studies may be time-consuming, pre-calculated robustness results for each case study are provided in a separate repository. You can access the robustness results repository at [insert URL]. The repository contains the pre-calculated robustness results for each case study, allowing you to review and analyze the robustness without re-running the analysis.
+Since running the case studies may be time-consuming, design alternatives of each case study generated through MO are provided tn this repository. What is more, pre-calculated robustness results for each case study are provided in a separate repository due to their large size. You can access the robustness results repository at [https://drive.google.com/drive/folders/1wA52HRU3jIeiFyXRta67kjQEUmON2D_H?usp=drive_link]. The repository contains the pre-calculated robustness results for each case study, allowing you to review and analyze the robustness without re-running the analysis.
 
 ## License
 
