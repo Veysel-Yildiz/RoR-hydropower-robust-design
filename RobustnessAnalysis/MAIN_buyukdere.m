@@ -28,7 +28,7 @@ HP.cf = 0.15; %the so-called site factor, ranges between 0 and 1.5 (used for the
 HP.om  =  0.01; % ranges between 0.01 and 0.04,(used for maintenance and operation cost)
 HP.fxc  =  3; % the expropriation and other costs including transmission line
 HP.pt = 750; % steel penstock price per ton ($/kWh)
-MFD = 0.156;
+MFD = 0.156; % the minimum environmental flow (m3/s)
 
 %% create SOWs: first future FDCs
 S_mod = CalcMetrics(O); % Calculate the summary metrics of the discharge data

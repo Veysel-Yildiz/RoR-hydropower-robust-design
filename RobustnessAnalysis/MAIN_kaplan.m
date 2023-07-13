@@ -1,5 +1,5 @@
 
-%% Main file to run on SHARC
+%% Main file to run on SHARC HPC
 
 % clc; clear;
 
