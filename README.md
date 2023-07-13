@@ -1,15 +1,11 @@
 
-This repository contains Matlab code and required files to calculate robustness metrics for RoR hydropower design. 
+This repository contains Matlab code and required files to generate design alternatives and to calculate robustness metrics for RoR hydropower design. 
 The methodology presented in the paper by  V. Yildiz, S.F. Brown, C. Rougé  "Revisiting small hydropower design in a drought-prone world" submitted to the Water Resources Research.
 
 
-# Robustness Analysis Files and HYPER Simulations
+# MATLAB Library: Amalgam_HYPER and Robustness_Analysis
 
-This folder contains MATLAB code for performing robustness analysis on five case studies, along with a separate file for post-processing the robustness results. Additionally, pre-calculated robustness results are provided.
-
-## Case Studies
-
-The robustness analysis files are provided for the following five case studies:
+This MATLAB library consists of two main folders: Amalgam_Hyper for multi-objective optimization (MO) and Robustness_Analysis for robustness analysis under different scenarios. Each folder contains separate setups for five case studies. 
 
 1. Case Study 1: [Besik RoR]
 2. Case Study 2: [Tepe RoR]
@@ -17,25 +13,40 @@ The robustness analysis files are provided for the following five case studies:
 4. Case Study 4: [Kaplan RoR]
 5. Case Study 5: [Buyukdere RoR]
 
-For each case study, there are MATLAB files that can be used to calculate the design robustness under various scenarios. However, to save time, pre-calculated robustness results are also provided for reference.
+Additionally, a MATLAB code file is provided for post-processing the robustness results once the analysis is completed. The library is released under the MIT License.
 
-## Robustness Calculation
+## Amalgam_HYPER
 
-To calculate the design robustness for each case study, follow these steps:
+The Amalgam_HYPER folder contains the multi-objective optimization (MO) code and setup for the five case studies. This code is designed to find optimal solutions by simultaneously considering multiple objectives. Each case study has its own setup within the folder.
+
+To use the Amalgam_HYPER code:
 
 1. Ensure that you have MATLAB installed on your system.
 2. Clone or download this repository to your local machine.
-3. Open MATLAB and navigate to the folder containing the MATLAB code for the desired case study.
-4. Run the MATLAB script or function specific to the case study and scenario you want to analyze.
+3. Open MATLAB and navigate to the Amalgam_HYPER folder.
+4. Run the MATLAB script or function specific to the desired case study to perform multi-objective optimization.
+5. The script/function will execute the optimization algorithm and generate optimal solutions based on the provided inputs.
 
-## Robustness Results
+## Robustness_Analysis
 
-Pre-calculated robustness results are provided for each case study, allowing you to review and compare the robustness of different designs without running the analysis from scratch. The results can be found in the respective case study folders.
+The Robustness_Analysis folder contains the robustness analysis code and setup for the five case studies. This code is used to evaluate generated design alternative robustness under various scenarios. Each case study has its own setup within the folder.
 
-## Robustness Metrics Quantification
+To use the Robustness_Analysis code:
 
-To  analyze the robustness results, a robustness metrics quantification file, `Robustness_Metrics.m`,  is provided. This file contains MATLAB code that can be used to calculate various robustness metrics based on the obtained results. You can use this file to quantify and compare the robustness of different designs across the case studies.
+1. Ensure that you have MATLAB installed on your system.
+2. Clone or download this repository to your local machine.
+3. Open MATLAB and navigate to the Robustness_Analysis folder.
+4. Run the MATLAB script or function specific to the desired case study and scenario to perform robustness analysis.
+5. The script/function will calculate the system's robustness based on the provided inputs and generate the results.
 
+## Post-processing the Robustness Results
+
+After running the robustness analysis, you can use the provided MATLAB code file, `Robustness_Metrics.m`,   for post-processing the results. This file is designed to analyze and visualize the robustness results obtained from the Robustness_Analysis code.
+
+
+## Robustness Results Repository
+
+Since running the case studies may be time-consuming, pre-calculated robustness results for each case study are provided in a separate repository. You can access the robustness results repository at [insert URL]. The repository contains the pre-calculated robustness results for each case study, allowing you to review and analyze the robustness without re-running the analysis.
 
 ## License
 
@@ -46,16 +57,3 @@ This project is licensed under the MIT License. See the LICENSE file for more de
 If you have any questions or need further assistance, please feel free to contact us at [vyildiz1@sheffield.ac.uk].
 
 Happy robustness analysis and post-processing!
-
-
-
-
-
-
-
-
-
-
-
-
-
