@@ -46,7 +46,7 @@ After running the robustness analysis, you can use the provided MATLAB code file
 
 ## Robustness Results Repository
 
-Since running the case studies may be time-consuming, design alternatives of each case study generated through MO are provided tn this repository. What is more, pre-calculated robustness results for each case study are provided in a separate repository due to their large size. You can access the robustness results repository at [https://drive.google.com/drive/folders/1wA52HRU3jIeiFyXRta67kjQEUmON2D_H?usp=drive_link]. The repository contains the pre-calculated robustness results for each case study, allowing you to review and analyze the robustness without re-running the analysis.
+Since running the case studies may be time-consuming, design alternatives of each case study generated through MO are provided tn this repository as Des_pars_CASE STUDY NAME. What is more, pre-calculated robustness results for each case study are provided in a separate repository due to their large size. You can access the robustness results repository at [https://drive.google.com/drive/folders/1wA52HRU3jIeiFyXRta67kjQEUmON2D_H?usp=drive_link]. The repository contains the pre-calculated robustness results for each case study, allowing you to review and analyze the robustness without re-running the analysis.
 
 ## License
 
