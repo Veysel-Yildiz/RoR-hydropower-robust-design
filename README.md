@@ -13,7 +13,7 @@ Case Study 3: Karacay RoR
 Case Study 4: Kaplan RoR
 Case Study 5: Buyukdere RoR
 
-Additionally, a MATLAB code is provided for post-processing the robustness results once the analysis is completed.
+Additionally, a MATLAB folder is provided for post-processing the robustness results once the analysis is completed.
 
 ## Amalgam_HYPER
 
@@ -27,7 +27,7 @@ To use the Amalgam_HYPER code:
 4. The required input files, including streamflow records as well as project-based parameters, are already provided in the respective case study folders.
 5. Adjust the population size and number of generations as desired. Default values are [population size = 100] and [number of generations = 1000].
 6. Run the `run_AMALGAM` MATLAB script for the desired case study.
-7. The script will execute the optimization algorithm and generate the Pareto set of design alternatives based on the provided inputs.
+7. The code will execute the optimization algorithm and generate the Pareto set of design alternatives based on the provided inputs.
 
 
 ## Robustness_Analysis
@@ -42,11 +42,11 @@ To use the Robustness_Analysis code:
 4. The required input files, including historical and synthetic streamflow records as well as project-based parameters, are already provided in the respective case study folders.
 4. Run the MATLAB script (main_CASE STUDY NAME)  of the desired case study to perform robustness analysis.
 5. The output of the robustness analysis will include a large-sized file containing parameters for both financial and streamflow scenarios and the evaluation of objective functions, energy generation, financial parameters of each alternative, and their robustness results.
-Please note that the robustness analysis for each case study was performed on a high-performance computing (HPC) system due to its computational expense. 
+Please note that the robustness analysis for each case study was performed on a high-performance computing (HPC) system due to its computational cost. 
 
 ## Post-processing the Robustness Results
 
-After running the robustness analysis, you can use the provided MATLAB code file, `Robustness_Metrics.m`,   for post-processing the results. This file is designed to analyze and visualize the robustness results obtained from the Robustness_Analysis code.
+After running the robustness analysis, you can use the provided MATLAB code file, `Robustness_Metrics.m` which is located in Post_Processing folder,  for post-processing the results. This file is designed to analyze and visualize the robustness results obtained from the Robustness_Analysis code.
 
 
 ## Robustness Results Repository
