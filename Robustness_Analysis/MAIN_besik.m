@@ -169,7 +169,6 @@ per = 50; %number of realizations
 for  j = 1: Ns
 
     Qsow =  cnew(j) + (anew(j)- cnew(j))*exp(sqrt(2)*bnew(j) *erfcinv(2*kpn));
-    %     Qsow(Qsow <0) = 0; %find negative values and make them zero
     Onew = max(Qsow - MFD, 0);
     HP.i = ir*multiplier(j,1);
     HP.ep10 = ep*multiplier(j,2);
@@ -185,22 +184,22 @@ for  j = 1: Ns
 
         if conf(k)==1
 
-            [AR(j,k),  AC(j,k), WEP1(j,k), BC(j,k), power(j,k), AAE(j,k), T_cost(j,k), NPV(j,k), PayB(j,k), Y_ae(j*2450-2449:j*2450,k), PB10(per*j-(per-1):per*j,k), PB15(per*j-(per-1):per*j,k), PB20(per*j-(per-1):per*j,k), nNPV(per*j-(per-1):per*j,k)] = calc_hpp1 ( X(k,:) , HP , Onew , type(k),1 );
+            [BC(j,k), power(j,k), AAE(j,k), NPV(j,k), PayB(j,k),  PB15(per*j-(per-1):per*j,k), nNPV(per*j-(per-1):per*j,k)] = calc_hpp1 ( X(k,:) , HP , Onew , type(k),1,k );
 
         elseif conf(k)==2
 
-            [AR(j,k),  AC(j,k), WEP1(j,k), BC(j,k), power(j,k), AAE(j,k), T_cost(j,k), NPV(j,k), PayB(j,k), Y_ae(j*2450-2449:j*2450,k), PB10(per*j-(per-1):per*j,k),  PB15(per*j-(per-1):per*j,k), PB20(per*j-(per-1):per*j,k), nNPV(per*j-(per-1):per*j,k)] = calc_hpp2 ( X(k,:) , HP , Onew , type(k), 2, k);
+            [BC(j,k), power(j,k), AAE(j,k), NPV(j,k), PayB(j,k),  PB15(per*j-(per-1):per*j,k), nNPV(per*j-(per-1):per*j,k)] = calc_hpp2 ( X(k,:) , HP , Onew , type(k), 2, k);
 
         else
 
-            [AR(j,k),  AC(j,k), WEP1(j,k), BC(j,k), power(j,k), AAE(j,k), T_cost(j,k), NPV(j,k), PayB(j,k), Y_ae(j*2450-2449:j*2450,k), PB10(per*j-(per-1):per*j,k),  PB15(per*j-(per-1):per*j,k), PB20(per*j-(per-1):per*j,k), nNPV(per*j-(per-1):per*j,k)] = calc_hpp3 ( X(k,:) , HP , Onew , type(k), 3, k);
+            [BC(j,k), power(j,k), AAE(j,k), NPV(j,k), PayB(j,k),  PB15(per*j-(per-1):per*j,k), nNPV(per*j-(per-1):per*j,k)] = calc_hpp3 ( X(k,:) , HP , Onew , type(k), 3, k);
         end
 
     end
 
 end
 
-save ('outputBESIK','AR', 'AC', 'WEP1','BC','power', 'AAE', 'T_cost','NPV', 'PayB','Y_ae','multiplier','FDCpars','kpn','PB10','PB15','PB20','nNPV','-v7.3')
+save ('outputBESIK','BC','power', 'AAE', 'NPV', 'PayB','multiplier','FDCpars','kpn','PB15','nNPV','-v7.3')
 
 
 

@@ -1,4 +1,4 @@
-function [Revenue, Cost, WEP_1, BC, power, AAE,  T_cost, NPV, PayB, Y_p, PB10, PB15, PB20, nNPV] = calc_hpp1 ( x , HP , O  , nt, On )
+function [ BC, power, AAE,  NPV, PayB,  PB15, nNPV] = calc_hpp1 ( x , HP , O  , nt, On ,kr )
 
 % Unpack the parameter values
 D = x(1); Od = x(2);
@@ -88,14 +88,13 @@ costP = cost_hpp ( HP ,D , Od , 0 ,  nt, On);
 
 % Unpack costs
 cost_em = costP(1); cost_pen = costP(2);  cost_ph = costP(4); %tp = costP(3);
-cost_cw = HP.cf * (cost_pen + cost_em ); % (in dollars) civil + open channel + Tunnel cost
-
 %%
-if k == 201 % makes it 201 or 202 
+if kr == 201 % makes it 201 or 202 
     cost_em = cost_em*0.9; % for identical turbines
 end
 
 %% 
+cost_cw = HP.cf * (cost_pen + cost_em ); % (in dollars) civil + open channel + Tunnel cost
 
 % Determine total cost (with cavitation)
 Cost_other = cost_pen + cost_ph + cost_cw;
@@ -111,7 +110,7 @@ for ny = 1:HP.ny
     Y_p(ny,:) = sum(P(365*ny-364:365*ny));
 end
 
-WEP_1  = prctile(Y_p,1)*24/10^4/AAE; % percentage
+% WEP_1  = prctile(Y_p,1)*24/10^4/AAE; % percentage
 
 R10 = AAE* HP.ep10*0.97; % first 10 years revenue
 R40 = AAE* HP.ep40*0.97; % last 40 years revenue
