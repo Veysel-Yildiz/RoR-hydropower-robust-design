@@ -1,6 +1,6 @@
 
 This repository contains Matlab code and required files to generate design alternatives and to calculate their robustness metrics for the robust design of five RoR hydropower plants.
-The methodology presented in the paper by  V. Yildiz, S.F. Brown, C. Rougé  "Revisiting small hydropower design in a drought-prone world" submitted to the Water Resources Research.
+The methodology presented in the paper by  V. Yildiz, S.F. Brown, C. RougÃ©  "Revisiting small hydropower design in a drought-prone world" submitted to the Water Resources Research.
 
 
 # MATLAB Library: Amalgam_HYPER and Robustness_Analysis
@@ -25,7 +25,7 @@ To use the Amalgam_HYPER code:
 2. Clone or download this repository to your local machine.
 3. Open MATLAB and navigate to the Amalgam_HYPER folder.
 4. The required input files, including streamflow records as well as project-based parameters, are already provided in the respective case study folders.
-5. Adjust the population size and number of generations as desired. Default values are [population size = 100] and [number of generations = 100].
+5. Adjust the population size and number of generations as desired. Default values are [population size = 100] and [number of generations = 1000].
 6. Run the `run_AMALGAM` MATLAB script for the desired case study.
 7. The script will execute the optimization algorithm and generate the Pareto set of design alternatives based on the provided inputs.
 
